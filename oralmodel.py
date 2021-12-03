@@ -47,7 +47,7 @@ def predict_oral(model, image):
     confidence = float(100*np.max(prediction_probabilities))
     # return the output as a JSON string
     output = {
-         "success": True, 
+         "success": label=='oral', 
          "confidence": confidence
     }
     return output
